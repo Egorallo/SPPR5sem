@@ -1,0 +1,173 @@
+﻿@*@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>Hello from our View Template!</p>
+*@
+
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/WebLabs_BSUIR_V02.styles.css" asp-append-
+          version="true" />
+</head>
+<body>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <header>
+        <div class="container">
+            <!-- Панель навигации -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- меню сайта -->
+                <a class="navbar-brand" href="#">WebLabsV02</a>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Лб 1</a>
+                    <a class="nav-item nav-link" href="#">Каталог</a>
+                    <a class="nav-item nav-link" href="#">Администрирование</a>
+                </div>
+                <!-- меню сайта - конец -->
+                <!-- Информация пользователя -->
+                <a href="#" class="navbar-text ms-auto">
+                    00,0 руб <i class="fa-solid fa-cart-shopping"></i> (0)
+                </a>
+                <div class="dropdown ms-4 nav-color">
+                    <button class="btn btn-secondary dropdown-toggle"
+                            type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        User@gmail.com
+                        <img src="images/user-solid.png" width="20"
+                             alt="User" class="rounded nav-color" />
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <span class="dropdown-item-text">
+                                <img src="images/user-solid.png"
+                                     width="20" alt="User" class="rounded" />
+                                user@gmail.com
+                            </span>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form id="logoutForm" class="form-inline" method="post">
+                                <button id="logout" type="submit" class="nav-link
+btn btn-link text-dark">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Информация пользователя - конец -->
+            </nav> <!-- Панель навигации - конец -->
+        </div><!-- container - конец -->
+    </header><!-- header - конец -->
+   
+    <main class="container">
+        <h1>Lab 1</h1>
+        <h2>List</h2>
+        <ol type="A" ">
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+        </ol>
+        <hr />
+        <h2>Form </h2>
+        <form method="post">
+            <table style="margin-left:225px">
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox1">
+                            <label class="form-check-label" for="gridCheck1">
+                                Checkbox 1
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox2">
+                            <label class="form-check-label" for="gridCheck1">
+                                Checkbox 2
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="margin-top:20px; margin-left:225px; margin-bottom:20px">
+                <tr>
+                    <td >
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                First radio
+                            </label>
+                        </div>
+                    </td>
+                    <td style="padding: 0 15px">
+                        <div class="col-sm">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio2" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Login</label>
+                <div class="col-sm-10" >
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter login" name="login">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Enter password" name="pass">
+                </div>
+            </div>
+
+           
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="navbar navbar-dark navbar-expand-md bg-dark">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-item nav-link" href="http://www.facebook.com">
+                        <i class="fa-brands fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a class="nav-item nav-link" href="http://www.vk.com">
+                        <i class="fa-brands fa-vk fa-2x"></i>
+                    </a>
+                    <a class="nav-item nav-link" href="http://www.twitter.com">
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
