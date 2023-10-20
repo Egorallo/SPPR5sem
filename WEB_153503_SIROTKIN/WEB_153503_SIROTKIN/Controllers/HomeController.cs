@@ -8,7 +8,7 @@ namespace WEB_153503_SIROTKIN.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["CurrentLab"] = "Lab 2";
+            ViewData["CurrentLab"] = "Lab 3";
 
             var listItems = new List<ListDemo>
             {

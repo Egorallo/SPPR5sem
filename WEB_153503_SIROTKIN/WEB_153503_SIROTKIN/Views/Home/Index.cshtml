@@ -2,87 +2,83 @@
     ViewBag.Title = "Index";
 }
 
-    
-        <h1>@ViewData["CurrentLab"]</h1>
-        <h2>List</h2>
-        <ol type="A">
-        @{
-            for (int i = 0; i < 5; i++)
-            {
-                <li>Element @(i) </li> 
-            }
+<h1>@ViewData["CurrentLab"]</h1>
+<h2>List</h2>
+<ol type="A">
+    @{
+        for (int i = 0; i < 5; i++)
+        {
+            <li>Element @(i) </li>
         }
-        </ol>
-        <hr />
-        <h2>Form </h2>  
-        <form method="post">
-            <div class="row mb-3">
-                <label for="listDemo" class="col-sm-2 col-form-label">Select an item:</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="listDemo" name="selectedItemId" asp-items="Model"></select>
-                    </div>
-            </div>
-            <table style="margin-left:225px">
-                <tr>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox1">
-                            <label class="form-check-label" for="gridCheck1">
-                                Checkbox 1
-                            </label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox2">
-                            <label class="form-check-label" for="gridCheck1">
-                                Checkbox 2
-                            </label>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-            <table style="margin-top:20px; margin-left:225px; margin-bottom:20px">
-                <tr>
-                    <td >
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio1" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                First radio
-                            </label>
-                        </div>
-                    </td>
-                    <td style="padding: 0 15px">
-                        <div class="col-sm">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio2" id="gridRadios2" value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Second radio
-                                </label>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Login</label>
-                <div class="col-sm-10" >
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter login" name="login">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Enter password" name="pass">
-                </div>
-            </div>
-
-           
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    @section Scripts{
-        Hello
     }
+</ol>
+<hr />
+<h2>Form </h2>
+<form method="post">
+    <div class="row mb-3">
+        <label for="listDemo" class="col-sm-2 col-form-label">Select an item:</label>
+        <div class="col-sm-10">
+            <select class="form-control" id="listDemo" name="selectedItemId" asp-items="Model"></select>
+        </div>
+    </div>
+    <table style="margin-left:225px">
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox1">
+                    <label class="form-check-label" for="gridCheck1">
+                        Checkbox 1
+                    </label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" name="checkbox2">
+                    <label class="form-check-label" for="gridCheck1">
+                        Checkbox 2
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table style="margin-top:20px; margin-left:225px; margin-bottom:20px">
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio1" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        First radio
+                    </label>
+                </div>
+            </td>
+            <td style="padding: 0 15px">
+                <div class="col-sm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio2" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            Second radio
+                        </label>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Login</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Enter login" name="login">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Enter password" name="pass">
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
