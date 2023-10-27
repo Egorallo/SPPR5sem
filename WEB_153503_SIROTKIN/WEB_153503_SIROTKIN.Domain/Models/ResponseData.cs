@@ -9,7 +9,7 @@ namespace WEB_153503_SIROTKIN.Domain.Models
     public class ResponseData<T>
     {
         // запрашиваемые данные
-        public T Data { get; set; }
+        public T? Data { get; set; }
         // признак успешного завершения запроса
         public bool Success { get; set; } = true;
         // сообщение в случае неуспешного завершения

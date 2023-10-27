@@ -32,6 +32,10 @@ namespace WEB_153503_SIROTKIN.Controllers
 
             var productResponse = await _laptopService.GetLaptopListAsync(laptopCategoryNormalized, pageNo);
 
+
+            if (!productResponse.Success)
+                return NotFound(productResponse.ErrorMessage);
+
             return View(new ListModel<Laptop>
             {
                 Items = productResponse.Data.Items,
